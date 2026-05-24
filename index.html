@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sophia Lin">
+  <title>Sophia Lin's Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f5f0e8;
+      --ink: #1a1814;
+      --rust: #b85c3a;
+      --muted: #7a7268;
+      --border: #d8d0c4;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      min-height: 100vh;
+    }
+
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 2.5rem;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--rust);
+    }
+
+    nav a.active {
+      color: var(--ink);
+    }
+
+    .resume-link {
+      margin-left: auto;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.9rem;
+      border-radius: 2px;
+    }
+
+    .resume-link:hover {
+      border-color: var(--rust);
+      color: var(--rust) !important;
+    }
+
+    header {
+      padding: 6rem 2.5rem 4rem;
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rust);
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      font-weight: 300;
+      line-height: 0.95;
+      letter-spacing: -0.01em;
+      margin-bottom: 2rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .tagline {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 480px;
+      margin-bottom: 3rem;
+    }
+
+    .cta-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .cta-links a {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--ink);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .cta-links a:hover {
+      color: var(--rust);
+      border-color: var(--rust);
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--border);
+      margin: 0 2.5rem 4rem;
+    }
+
+    .intro-section {
+      padding: 0 2.5rem 6rem;
+      max-width: 700px;
+    }
+
+    .intro-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    .intro-section p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2.5rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="./index.html" title="Sophia Lin's Portfolio" target="_self">Home</a> &nbsp;| &nbsp;
+    <a href="./about.html" title="About Sophia Lin" target="_self">About</a> &nbsp;| &nbsp;
+    <a href="./collection.html" title="Sophia Lin's Works" target="_self">Works</a> &nbsp;| &nbsp;
+    <a href="./contact.html" title="Contact Sophia Lin" target="_self">Contact</a> &nbsp;| &nbsp;
+    <a href="./more/somepage.html" title="More" target="_self">More</a>
+    <a href="Resume.pdf" download class="resume-link">↓ Resume</a>
+  </nav>
+
+  <header>
+    <p class="eyebrow">Portfolio — 2026</p>
+    <h1><em>Sophia Lin</em></h1>
+    <p class="tagline">
+      A BCIT part-time student based in Vancouver, with a determinedgoal of becoming a successful UX/UI designer.
+      I design with intention — solving real problems through research,
+      systems thinking, and a healthy obsession with the details.
+    </p>
+    <div class="cta-links">
+      <a href="works.html">View Work</a>
+      <a href="about.html">About Me</a>
+      <a href="contact.html">Get in Touch</a>
+    </div>
+  </header>
+
+  <div class="divider"></div>
+
+  <section class="intro-section">
+    <h2>Currently studying at BCIT</h2>
+    <p>
+      Currently pursuing a career in UX/UI Design, I bring a cross-disciplinary
+      perspective to every project — from user research and wireframing to HTML/CSS
+      development and presentation design. I think in systems, question assumptions,
+      and care deeply about making things that actually work for people.
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2026 Sophia Lin &mdash; Vancouver, BC
+  </footer>
+
+</body>
+</html>

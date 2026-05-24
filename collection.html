@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sophia Lin">
+  <title>Works — Sophia Lin</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f5f0e8;
+      --ink: #1a1814;
+      --rust: #b85c3a;
+      --muted: #7a7268;
+      --border: #d8d0c4;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      min-height: 100vh;
+    }
+
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 2.5rem;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--rust); }
+    nav a.active { color: var(--ink); }
+
+    .resume-link {
+      margin-left: auto;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.9rem;
+      border-radius: 2px;
+    }
+
+    .resume-link:hover {
+      border-color: var(--rust);
+      color: var(--rust) !important;
+    }
+
+    .page-header {
+      padding: 4rem 2.5rem 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rust);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 300;
+      line-height: 1.05;
+    }
+
+    main {
+      padding: 3rem 2.5rem 6rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2px;
+      margin-bottom: 4rem;
+    }
+
+    .project-card {
+      border: 1px solid var(--border);
+      padding: 2rem;
+      background: var(--cream);
+      transition: background 0.2s;
+    }
+
+    .project-card:hover {
+      background: #ede8de;
+    }
+
+    .project-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rust);
+      margin-bottom: 0.75rem;
+    }
+
+    .project-card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .project-card p {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+
+    .project-card a {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 1px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .project-card a:hover {
+      color: var(--rust);
+      border-color: var(--rust);
+    }
+
+    .image-section {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .image-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+    }
+
+    .image-section .caption {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .image-section .caption a {
+      color: var(--rust);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rust);
+    }
+
+    .external-image-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    .external-image-link img {
+      display: block;
+      max-width: 100%;
+      width: 480px;
+      border: 1px solid var(--border);
+      filter: sepia(0.15);
+      transition: filter 0.3s;
+    }
+
+    .external-image-link:hover img {
+      filter: sepia(0);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2.5rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+<body>
+
+ <nav>
+    <a href="./index.html" title="Sophia Lin's Portfolio" target="_self">Home</a> &nbsp;| &nbsp;
+    <a href="./about.html" title="About Sophia Lin" target="_self">About</a> &nbsp;| &nbsp;
+    <a href="./collection.html" title="Sophia Lin's Works" target="_self">Works</a> &nbsp;| &nbsp;
+    <a href="./contact.html" title="Contact Sophia Lin" target="_self">Contact</a> 
+    <a href="Resume.pdf" download class="resume-link">↓ Resume</a>
+  </nav>
+
+  <div class="page-header">
+    <p class="eyebrow">Selected Work</p>
+    <h1>Projects &amp;<br>Case Studies</h1>
+  </div>
+
+  <main>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <p class="project-tag">UX Design / Concept</p>
+        <h2>Fabric Filter App</h2>
+        <p>
+          A clothing search tool that lets users filter by fabric composition —
+          cotton percentage, breathability, stretch — because material matters
+          and no one lets you search for it.
+        </p>
+        <a href="contact.html">Get in Touch →</a>
+      </div>
+
+      <div class="project-card">
+        <p class="project-tag">UX Design / Concept</p>
+        <h2>Fashion Aggregator</h2>
+        <p>
+          A cross-platform tracker for new arrivals and pre-sale drops across
+          brands, pulling real-time social signals into one feed. Built around
+          a genuine frustration with fragmented brand announcements.
+        </p>
+        <a href="contact.html">Get in Touch →</a>
+      </div>
+
+      <div class="project-card">
+        <p class="project-tag">Communication / BCIT</p>
+        <h2>How to Do More Work in Less Time</h2>
+        <p>
+         Final presentation exploring practical strategies for improving productivity
+   without burnout. Focused on time management techniques backed by research,
+   challenging common misconceptions about busyness and efficiency.
+        </p>
+        <a href="contact.html">Get in Touch →</a>
+      </div>
+
+      <div class="project-card">
+        <p class="project-tag">Web Development / BCIT</p>
+        <h2>HTML Portfolio Site</h2>
+        <p>
+          This site — built as an assignment in multi-document linking,
+          in-page navigation, external file links, and GitHub Pages publishing.
+        </p>
+        <a href="sophialjy.github.io/sophias-portfolio-repo/" target="_blank">View on GitHub →</a>
+      </div>
+
+    </div>
+
+
+    <div class="image-section">
+  <h2>Inspiration</h2>
+  <p class="caption">
+    Good design starts with noticing things. —
+    <a href="https://www.figma.com" target="_blank">open Figma here</a>
+  </p>
+
+  <img
+    src="Figma-Logo.png"
+    alt="Figma - where I do most of my design work"
+    style="width:200px;"
+  >
+</div>
+
+      </a>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Sophia Lin &mdash; Vancouver, BC
+  </footer>
+
+</body>
+</html>

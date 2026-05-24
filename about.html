@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sophia Lin">
+  <title>About — Sophia Lin</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f5f0e8;
+      --ink: #1a1814;
+      --rust: #b85c3a;
+      --muted: #7a7268;
+      --border: #d8d0c4;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      min-height: 100vh;
+    }
+
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 2.5rem;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--rust); }
+    nav a.active { color: var(--ink); }
+
+    .resume-link {
+      margin-left: auto;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.9rem;
+      border-radius: 2px;
+    }
+
+    .resume-link:hover {
+      border-color: var(--rust);
+      color: var(--rust) !important;
+    }
+
+    .page-header {
+      padding: 4rem 2.5rem 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rust);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 300;
+      line-height: 1.05;
+    }
+
+    .jump-nav {
+      padding: 1.2rem 2.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .jump-nav span {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .jump-nav a {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      padding-bottom: 1px;
+      border-bottom: 1px solid var(--ink);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .jump-nav a:hover {
+      color: var(--rust);
+      border-color: var(--rust);
+    }
+
+    main {
+      max-width: 720px;
+      padding: 4rem 2.5rem 6rem;
+    }
+
+    section {
+      margin-bottom: 4.5rem;
+      scroll-margin-top: 2rem;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    p {
+      font-size: 0.83rem;
+      color: var(--muted);
+      line-height: 1.95;
+      margin-bottom: 1rem;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    ul li {
+      font-size: 0.8rem;
+      color: var(--muted);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 1rem;
+    }
+
+    ul li::before {
+      content: '—';
+      color: var(--rust);
+      flex-shrink: 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2.5rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="./index.html" title="Sophia Lin's Portfolio" target="_self">Home</a> &nbsp;| &nbsp;
+    <a href="./about.html" title="About Sophia Lin" target="_self">About</a> &nbsp;| &nbsp;
+    <a href="./collection.html" title="Sophia Lin's Works" target="_self">Works</a> &nbsp;| &nbsp;
+    <a href="./contact.html" title="Contact Sophia Lin" target="_self">Contact</a> 
+    <a href="resume.pdf" download class="resume-link">↓ Resume</a>
+  </nav>
+    
+
+  <div class="page-header">
+    <p class="eyebrow">About Me</p>
+    <h1>Background,<br>Skills &amp; Interests</h1>
+  </div>
+
+ 
+  <div class="jump-nav">
+    <span>Jump to:</span>
+    <a href="#background">Background</a>
+    <a href="#skills">Skills</a>
+    <a href="#interests">Interests</a>
+  </div>
+
+  <main>
+
+    <section id="background">
+      <h2>Background</h2>
+      <p>
+        I'm Sophia Lin, a part-time student at BCIT in Vancouver with a focus on UX design as my career path.
+        I'm drawn to design problems that come from genuine frustration — the kind where you keep running into a wall and think,
+        <br><em>why doesn't this exist yet?</em>
+      </p>
+      <p>
+        My approach is grounded and systems-oriented. I think through edge cases before I get
+        excited about solutions, and I'd rather find a real problem than a polished answer to
+        the wrong question. That mindset shapes how I research, design, and communicate.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>UX Research &amp; User Interviews</li>
+        <li>Wireframing &amp; Prototyping</li>
+        <li>HTML &amp; CSS Development</li>
+        <li>Information Architecture</li>
+        <li>Presentation Design &amp; Delivery</li>
+        <li>Critical Analysis &amp; Problem Framing</li>
+      </ul>
+    </section>
+
+    <section id="interests">
+      <h2>Interests</h2>
+      <p>
+        Outside of design work, I'm into music, fashion, food, baking, and dance.
+        A lot of my design ideas come from personal frustrations — like wishing you could
+        have more detailed filters when shopping for clothes online, or wanting a better way to track new music releases from my favourite artists. 
+        I care deeply about the details and the user experience of everyday products, and I think that passion shows in my work.
+      </p>
+      <p>
+        I believe the best products get built by people who actually feel the problem.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Sophia Lin &mdash; Vancouver, BC
+  </footer>
+
+</body>
+</html>
